@@ -1,10 +1,10 @@
+# require 'simplecov'
+# SimpleCov.start
 require "minitest/autorun"
 require "minitest/pride"
 require_relative '../lib/load_file.rb'
 require 'pry'
 
-
-class LoadFileTest < Minitest::Test
 
   def test_cleaned_data_exists_as_empty_array_when_instantianted
     load_file = LoadFile.new

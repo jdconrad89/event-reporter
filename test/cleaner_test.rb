@@ -1,3 +1,5 @@
+# require 'simplecov'
+# SimpleCov.start
 require "minitest/autorun"
 require "minitest/pride"
 require_relative '../lib/cleaner.rb'
@@ -29,8 +31,8 @@ class CleanerTest < Minitest::Test
 
   def test_a_home_phone_has_been_cleaned
     assert_equal "3037049251", Cleaner.home_phone("303-704-9251")
-    assert_equal "bad number", Cleaner.home_phone("1234")
-    assert_equal "bad number", Cleaner.home_phone("")
+    assert_equal "Invlaid Number", Cleaner.home_phone("1234")
+    assert_equal "Invlaid Number", Cleaner.home_phone("")
     # assert_equal "bad number", clean.home
   end
 

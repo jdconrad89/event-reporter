@@ -22,9 +22,4 @@ class LoadFile
     end
   end
 
-  def find()
-    @queue.shovel
-
-  end
-
 end

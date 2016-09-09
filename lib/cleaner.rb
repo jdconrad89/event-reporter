@@ -1,3 +1,5 @@
+# require 'Simplecov'
+# SimpleCov.start
 require'csv'
 require 'sunlight/congress'
 require 'erb'
@@ -20,19 +22,15 @@ module Cleaner
 
   def self.home_phone(home_phone)
     home_phone = home_phone.to_s.gsub(/[^0-9]/, "")
+
     if home_phone.length == 10
-        home_phone
-    elsif home_phone.length < 10
-        "bad number"
+      home_phone
     elsif home_phone.length == 11 && home_phone[0] == "1"
-        home_phone.slice!(0)
-        home_phone
-    elsif home_phone.length == 11 && home_phone[0] != "1"
-      "bad number"
-    else home_phone.length > 11
-      "bad number"
+      home_phone.slice!(0)
+      home_phone
+    else
+      "Invlaid Number"
     end
-    home_phone
   end
 
   def self.city(city)

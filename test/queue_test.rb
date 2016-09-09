@@ -1,3 +1,5 @@
+# require 'simplecov'
+# SimpleCov.start
 require "minitest/autorun"
 require "minitest/pride"
 require_relative '../lib/load_file.rb'
@@ -19,10 +21,10 @@ class QueueTest < Minitest::Test
     assert_equal 2, queue.count
   end
 
-  def test_if_queue_can_be_cleared
-    queue = Queue.new
-    queue.find("first_name", "Sarah")
-    assert_equal [], queue.clear_queue
-  end
+  # def test_if_queue_can_be_cleared
+  #   queue = Queue.new
+  #   queue.find("first_name", "Sarah")
+  #   assert_equal [], queue.clear_queue
+  # end
 
 end
