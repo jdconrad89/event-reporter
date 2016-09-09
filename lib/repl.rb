@@ -46,6 +46,10 @@ puts lines
       output = queue.printer
       puts output
       puts lines
+    elsif input == "print by"
+      puts "How would you like to print by?"
+      input_4 = gets.chomp
+      queue.print_by(input_4)
     elsif input ==  "help command"
       Phrases.help_command
       puts lines
